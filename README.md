@@ -14,3 +14,4 @@ It was built to gain experience in gameplay mechanics, level design, and narrati
 2. 
    ```bash
    git clone https://github.com/isaaltunoglu/Future-arcade-game.git
+3.Open Godot Engine and import .godot file and have fun
