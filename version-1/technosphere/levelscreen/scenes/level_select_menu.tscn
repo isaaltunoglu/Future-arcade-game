@@ -1,0 +1,172 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg24awtgu6on1"]
+
+[ext_resource type="Script" path="res://levelscreen/scripts/level_select_menu.gd" id="1_wyt36"]
+[ext_resource type="Texture2D" uid="uid://dmtft3j1mgcwv" path="res://levelscreen/scenes/_.png" id="2_isecu"]
+[ext_resource type="Texture2D" uid="uid://cvp7i314hnoni" path="res://levelscreen/scenes/1-Photoroom.png" id="3_cxc3u"]
+
+[node name="LevelSelectMenu" type="Node2D"]
+script = ExtResource("1_wyt36")
+
+[node name="lvl4_locked" type="ColorRect" parent="."]
+visible = false
+offset_left = 939.0
+offset_top = 165.0
+offset_right = 1059.0
+offset_bottom = 285.0
+color = Color(1, 0.0705882, 0, 1)
+
+[node name="lvl3_locked" type="ColorRect" parent="."]
+visible = false
+offset_left = 651.0
+offset_top = 305.0
+offset_right = 771.0
+offset_bottom = 425.0
+color = Color(1, 0.0901961, 0, 1)
+
+[node name="lvl2_locked" type="ColorRect" parent="."]
+visible = false
+offset_left = 372.0
+offset_top = 165.0
+offset_right = 492.0
+offset_bottom = 285.0
+color = Color(0.933333, 0, 0.231373, 1)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 503.0
+offset_top = 42.0
+offset_right = 607.0
+offset_bottom = 65.0
+text = "LEVEL SELECT"
+
+[node name="Label2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -395.0
+offset_top = 254.0
+offset_right = -332.0
+offset_bottom = 277.0
+text = "LEVEL 1"
+
+[node name="Label3" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 100.0
+offset_right = -40.0
+offset_bottom = 123.0
+text = "LEVEL 2"
+
+[node name="Label4" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 240.0
+offset_right = 242.0
+offset_bottom = 263.0
+text = "LEVEL 3"
+
+[node name="Label5" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 100.0
+offset_right = 528.0
+offset_bottom = 123.0
+text = "LEVEL 4"
+
+[node name="BG" type="ColorRect" parent="."]
+visible = false
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 552.0
+
+[node name="lvl1_locked" type="ColorRect" parent="."]
+visible = false
+offset_left = 79.0
+offset_top = 319.0
+offset_right = 199.0
+offset_bottom = 439.0
+color = Color(0.979603, 0, 0.145701, 1)
+
+[node name="lvl4_completed" type="ColorRect" parent="."]
+visible = false
+offset_left = 939.0
+offset_top = 165.0
+offset_right = 1059.0
+offset_bottom = 285.0
+color = Color(0, 1, 0, 1)
+
+[node name="lvl3_completed" type="ColorRect" parent="."]
+visible = false
+offset_left = 651.0
+offset_top = 305.0
+offset_right = 771.0
+offset_bottom = 425.0
+color = Color(0.0156863, 1, 0.172549, 1)
+
+[node name="lvl2_completed" type="ColorRect" parent="."]
+visible = false
+offset_left = 372.0
+offset_top = 165.0
+offset_right = 492.0
+offset_bottom = 285.0
+color = Color(0, 1, 0, 1)
+
+[node name="lvl1_completed" type="ColorRect" parent="."]
+visible = false
+offset_left = 79.0
+offset_top = 319.0
+offset_right = 199.0
+offset_bottom = 439.0
+color = Color(0, 1, 0, 1)
+
+[node name="Button4" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 633.0
+offset_top = 369.0
+offset_right = 943.0
+offset_bottom = 557.0
+
+[node name="Button3" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 203.0
+offset_top = 364.0
+offset_right = 520.0
+offset_bottom = 560.0
+
+[node name="Button2" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 632.0
+offset_top = 78.0
+offset_right = 938.0
+offset_bottom = 274.0
+
+[node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 200.0
+offset_top = 80.0
+offset_right = 518.0
+offset_bottom = 277.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(573, 323)
+scale = Vector2(0.86, 0.86)
+texture = ExtResource("2_isecu")
+
+[node name="lock1" type="Sprite2D" parent="."]
+position = Vector2(784, 174)
+scale = Vector2(0.19691, 0.113624)
+texture = ExtResource("3_cxc3u")
+
+[node name="lock2" type="Sprite2D" parent="."]
+position = Vector2(355, 470)
+scale = Vector2(0.19691, 0.12339)
+texture = ExtResource("3_cxc3u")
+
+[node name="lock3" type="Sprite2D" parent="."]
+position = Vector2(788, 469)
+scale = Vector2(0.215464, 0.134132)
+texture = ExtResource("3_cxc3u")
+
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

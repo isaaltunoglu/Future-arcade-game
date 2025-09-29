@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://82om6chrmgl6"]
+
+[ext_resource type="Script" path="res://scripts/nextlevel.gd" id="1_vt847"]
+[ext_resource type="Texture2D" uid="uid://bi5vx6rnp7jpx" path="res://Assets/sprites/Levels/Level 1/checkpoint-Photoroom.png" id="2_qynfp"]
+[ext_resource type="AudioStream" uid="uid://cfggiq0s3o8kf" path="res://Assets/music/success-340660.mp3" id="3_hx782"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xjw4"]
+size = Vector2(26.6281, 24.6212)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_vt847")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(92, 159.183)
+scale = Vector2(8.90588, 6.76282)
+texture = ExtResource("2_qynfp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(93, 210)
+scale = Vector2(53.5108, 55.6721)
+shape = SubResource("RectangleShape2D_6xjw4")
+
+[node name="sfx_succes" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_hx782")
+volume_db = 5.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

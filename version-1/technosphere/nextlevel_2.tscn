@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://7pvsexiob1go"]
+
+[ext_resource type="Script" path="res://scripts/nextlevel_2.gd" id="1_h1uje"]
+[ext_resource type="Texture2D" uid="uid://bi5vx6rnp7jpx" path="res://Assets/sprites/Levels/Level 1/checkpoint-Photoroom.png" id="2_ho13p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6tdoo"]
+size = Vector2(188.5, 168)
+
+[node name="nextlevel2" type="Area2D"]
+script = ExtResource("1_h1uje")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 4)
+shape = SubResource("RectangleShape2D_6tdoo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ho13p")

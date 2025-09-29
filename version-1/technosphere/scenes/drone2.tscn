@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://dkqiiit52212x"]
+
+[ext_resource type="Texture2D" uid="uid://dui0sls8yxmk6" path="res://Assets/sprites/Robots/drone2.png" id="1_8xc0v"]
+[ext_resource type="PackedScene" uid="uid://do8drpsehn2uc" path="res://scenes/killzone.tscn" id="2_46yak"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46yak"]
+atlas = ExtResource("1_8xc0v")
+region = Rect2(0, 0, 243, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x6d7"]
+atlas = ExtResource("1_8xc0v")
+region = Rect2(243, 0, 243, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liw3q"]
+atlas = ExtResource("1_8xc0v")
+region = Rect2(486, 0, 243, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aam15"]
+atlas = ExtResource("1_8xc0v")
+region = Rect2(0, 232, 243, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgp5u"]
+atlas = ExtResource("1_8xc0v")
+region = Rect2(243, 232, 243, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ry1n6"]
+atlas = ExtResource("1_8xc0v")
+region = Rect2(486, 232, 243, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5y6tg"]
+atlas = ExtResource("1_8xc0v")
+region = Rect2(0, 464, 243, 232)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4sneb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46yak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1x6d7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liw3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aam15")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgp5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ry1n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5y6tg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46yak"]
+size = Vector2(148.11429, 146.26086)
+
+[node name="drone2" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.21604939, 0.19827586)
+sprite_frames = SubResource("SpriteFrames_4sneb")
+autoplay = "default"
+frame_progress = 0.71670604
+
+[node name="Killzone" parent="." instance=ExtResource("2_46yak")]
+position = Vector2(0, -1)
+scale = Vector2(0.21604939, 0.19827586)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(-4.628572, -10.086958)
+shape = SubResource("RectangleShape2D_46yak")

@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://ba7s7j7gas20b"]
+
+[ext_resource type="Texture2D" uid="uid://4cm43nu8llv8" path="res://Assets/sprites/Robots/drone3.png" id="1_a6ram"]
+[ext_resource type="PackedScene" uid="uid://do8drpsehn2uc" path="res://scenes/killzone.tscn" id="2_d7xg2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7xg2"]
+size = Vector2(192.158, 153.554)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7xg2"]
+atlas = ExtResource("1_a6ram")
+region = Rect2(0, 0, 243, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03d1k"]
+atlas = ExtResource("1_a6ram")
+region = Rect2(243, 0, 243, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ys8o6"]
+atlas = ExtResource("1_a6ram")
+region = Rect2(0, 232, 243, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mv8q1"]
+atlas = ExtResource("1_a6ram")
+region = Rect2(243, 232, 243, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8r07"]
+atlas = ExtResource("1_a6ram")
+region = Rect2(0, 464, 243, 232)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dy0gq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7xg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03d1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ys8o6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mv8q1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8r07")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="drone3" type="Node2D"]
+
+[node name="Killzone" parent="." instance=ExtResource("2_d7xg2")]
+position = Vector2(-2, 1)
+scale = Vector2(0.156121, 0.149784)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(12.8105, -3.33814)
+shape = SubResource("RectangleShape2D_d7xg2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, 1)
+scale = Vector2(0.156121, 0.149784)
+sprite_frames = SubResource("SpriteFrames_dy0gq")
+autoplay = "default"
+frame_progress = 0.176168

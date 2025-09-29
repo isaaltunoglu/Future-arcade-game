@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource type="Texture" uid="uid://b2w6yugqoj6as" path="res://ui/anamenu/ayarlarmenu (1).png" id="1"]
+[ext_resource type="Script" path="res://ui/anamenu/backbutton.gd" id="2"]
+[ext_resource type="DynamicFontData" uid="uid://c7svwfbxq261x" path="res://ui/anamenu/fotoğraflar/kenney_kenney-fonts/Fonts/Kenney Pixel.ttf" id="3"]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="ayarlar" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 751.5, 482 )
+texture = ExtResource( 1 )
+
+[node name="backbutton" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = -928.0
+margin_right = 173.0
+margin_bottom = -885.0
+theme = SubResource( 2 )
+text = "<- Back"
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="backbutton" to="backbutton" method="_on_backbutton_pressed"]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://eybqu3lanmbp"]
+
+[ext_resource type="Texture2D" uid="uid://gyydhw65q8m" path="res://Assets/sprites/Levels/Level 1/Aferin Mezun Oldun Şimdi Daha Zor Zamanlar Senİ Bekliyor.jpg" id="1_2dcy0"]
+
+[node name="finishscreen" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AferinMezunOldunŞimdiDahaZorZamanlarSenİBekliyor" type="Sprite2D" parent="."]
+position = Vector2(-20, -4.00001)
+scale = Vector2(0.226406, 0.232845)
+texture = ExtResource("1_2dcy0")

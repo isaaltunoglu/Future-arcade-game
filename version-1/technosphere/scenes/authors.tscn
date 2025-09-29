@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4iof265dogd2"]
+
+[ext_resource type="Script" path="res://scripts/authors.gd" id="1_swjh7"]
+[ext_resource type="Texture2D" uid="uid://cb03paeqbswl8" path="res://scenes/WhatsApp Image 2025-09-28 at 19.25.33.jpeg" id="2_utrg8"]
+[ext_resource type="AudioStream" uid="uid://3us8buj0yfku" path="res://Assets/music/toy-button-105724.mp3" id="3_iotj5"]
+[ext_resource type="Texture2D" uid="uid://behp2f3qe47dd" path="res://scenes/WhatsApp Image 2025-09-28 at 19.51.58-Photoroom.png" id="3_qpu47"]
+
+[node name="authors" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_swjh7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -536.0
+offset_top = -316.0
+offset_right = 488.0
+offset_bottom = 1220.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.07127, 0.422804)
+texture = ExtResource("2_utrg8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 8.0
+offset_right = 80.0
+offset_bottom = 48.0
+scale = Vector2(5.47554, 10.2546)
+
+[node name="back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer"]
+stream = ExtResource("3_iotj5")
+volume_db = 5.0
+
+[node name="WhatsAppImage2025-09-28At19_51_58-photoroom" type="Sprite2D" parent="."]
+position = Vector2(133, 50)
+scale = Vector2(0.192756, 0.158032)
+texture = ExtResource("3_qpu47")

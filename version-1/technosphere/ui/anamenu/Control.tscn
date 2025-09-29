@@ -1,0 +1,219 @@
+[gd_scene load_steps=23 format=3 uid="uid://dgt0n8p7gaxbc"]
+
+[ext_resource type="Script" path="res://ui/anamenu/Control.gd" id="1"]
+[ext_resource type="AudioStream" uid="uid://bvajhli0pnhsn" path="res://ui/anamenu/Down to Earth - CJ Gladback - SoundLoadMate.com.mp3" id="2"]
+[ext_resource type="Script" path="res://ui/anamenu/ParallaxBackground.gd" id="3"]
+[ext_resource type="FontFile" uid="uid://c7svwfbxq261x" path="res://ui/anamenu/fotoğraflar/kenney_kenney-fonts/Fonts/Kenney Pixel.ttf" id="4"]
+[ext_resource type="Texture2D" uid="uid://bls0xaa5frrlx" path="res://ui/anamenu/fotoğraflar/5.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bmudhvbot7pj2" path="res://ui/anamenu/fotoğraflar/2.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://nuy63ljdgnla" path="res://ui/anamenu/fotoğraflar/1.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://irvnjmsauu4y" path="res://ui/anamenu/fotoğraflar/6.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://18w535udwp5r" path="res://ui/anamenu/fotoğraflar/4.png" id="9"]
+[ext_resource type="Script" path="res://ui/anamenu/Sprite.gd" id="10"]
+[ext_resource type="Texture2D" uid="uid://jn781y3ih25o" path="res://ui/anamenu/fotoğraflar/3.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://sv40e3bybky7" path="res://ui/anamenu/fotoğraflar/7.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://ci3p0f5rvql43" path="res://ui/anamenu/fotoğraflar/Foreground.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://caltfytscrwi5" path="res://ui/anamenu/fotoğraflar/Background.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://berhcy6w6t4vb" path="res://ui/anamenu/fotoğraflar/8.png" id="15"]
+[ext_resource type="AudioStream" uid="uid://3us8buj0yfku" path="res://Assets/music/toy-button-105724.mp3" id="15_ghik6"]
+[ext_resource type="Script" path="res://ui/anamenu/PauseMenu.gd" id="16"]
+
+[sub_resource type="FontVariation" id="FontVariation_avjqm"]
+base_font = ExtResource("4")
+
+[sub_resource type="Theme" id="Theme_ta3gr"]
+default_font = SubResource("FontVariation_avjqm")
+
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("4")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="Theme" id="2"]
+default_font = SubResource("1")
+
+[sub_resource type="Theme" id="3"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = 2.0
+offset_right = -471.231
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.67143, 1)
+size_flags_horizontal = 4
+script = ExtResource("1")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("3")
+
+[node name="ParallaxLayer-4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.01, 0.01)
+
+[node name="Sprite" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer-4"]
+position = Vector2(565, 332)
+scale = Vector2(3.903, 3.717)
+texture = ExtResource("14")
+region_rect = Rect2(0, 1, 320, 179)
+
+[node name="ParallaxLayer-3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.02, 0.02)
+
+[node name="Sprite" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer-3"]
+position = Vector2(569, 416)
+scale = Vector2(3.9, 3.683)
+texture = ExtResource("13")
+
+[node name="ParallaxLayer-2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.03, 0.03)
+
+[node name="Sprite" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer-2"]
+position = Vector2(568, 333)
+scale = Vector2(3.9, 3.706)
+texture = ExtResource("14")
+
+[node name="ParallaxLayer-1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.05, 0.05)
+
+[node name="Sprite" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer-1"]
+position = Vector2(564, 330)
+scale = Vector2(3.9, 3.744)
+texture = ExtResource("15")
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="Sprite" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7"]
+position = Vector2(563, 325)
+scale = Vector2(3.9, 3.622)
+texture = ExtResource("7")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.15, 0.15)
+
+[node name="Sprite" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(566, 337)
+scale = Vector2(3.9, 3.717)
+texture = ExtResource("6")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.25, 0.25)
+
+[node name="Sprite" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(565, 331)
+scale = Vector2(3.9, 3.694)
+texture = ExtResource("11")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+
+[node name="Sprite" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(562, 330)
+scale = Vector2(3.9, 3.717)
+texture = ExtResource("9")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+
+[node name="Sprite" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(564, 330)
+scale = Vector2(3.9, 3.733)
+texture = ExtResource("5")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.9, 0.9)
+
+[node name="Sprite" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(574, 331)
+scale = Vector2(4.2, 3.706)
+texture = ExtResource("8")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1.2, 1.2)
+
+[node name="Sprite" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(576, 335)
+scale = Vector2(4.2, 3.661)
+texture = ExtResource("12")
+script = ExtResource("10")
+
+[node name="Label" type="Label" parent="ParallaxBackground"]
+offset_left = 386.0
+offset_top = 85.0
+offset_right = 432.0
+offset_bottom = 108.0
+scale = Vector2(7.88534, 7.87526)
+theme = SubResource("Theme_ta3gr")
+text = "BENJAMIN"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+light_mask = 262145
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 65.8119
+offset_top = -259.0
+offset_right = 114.812
+offset_bottom = -167.0
+grow_vertical = 0
+scale = Vector2(2.5, 2.5)
+theme = SubResource("2")
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("3")
+text = "Start"
+
+[node name="Timer" type="Timer" parent="VBoxContainer/Start"]
+
+[node name="push_sfx" type="AudioStreamPlayer2D" parent="VBoxContainer/Start"]
+stream = ExtResource("15_ghik6")
+volume_db = 5.0
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="Authors" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Credits
+
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2")
+autoplay = true
+
+[node name="PauseMenu" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+script = ExtResource("16")
+
+[node name="Button" type="Button" parent="PauseMenu"]
+layout_mode = 2
+text = "Resume"
+
+[node name="Button2" type="Button" parent="PauseMenu"]
+layout_mode = 2
+text = "Options"
+
+[node name="Button3" type="Button" parent="PauseMenu"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]

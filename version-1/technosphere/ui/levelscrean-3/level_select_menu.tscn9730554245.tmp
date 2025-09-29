@@ -1,0 +1,153 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg24awtgu6on1"]
+
+[ext_resource type="Script" uid="uid://dp8hgahniil08" path="res://level_select_menu.gd" id="1_y7o05"]
+[ext_resource type="Texture2D" uid="uid://cmueu4m006m2l" path="res://download.png" id="2_mflmt"]
+
+[node name="LevelSelectMenu" type="Node2D"]
+script = ExtResource("1_y7o05")
+
+[node name="BG" type="ColorRect" parent="."]
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 552.0
+color = Color(0, 0, 0.38039216, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 503.0
+offset_top = 42.0
+offset_right = 607.0
+offset_bottom = 65.0
+text = "LEVEL SELECT"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 108.0
+offset_top = 296.0
+offset_right = 171.0
+offset_bottom = 319.0
+text = "LEVEL 1"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 400.0
+offset_top = 142.0
+offset_right = 463.0
+offset_bottom = 165.0
+text = "LEVEL 2"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 682.0
+offset_top = 282.0
+offset_right = 745.0
+offset_bottom = 305.0
+text = "LEVEL 3"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 968.0
+offset_top = 142.0
+offset_right = 1031.0
+offset_bottom = 165.0
+text = "LEVEL 4"
+
+[node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 79.0
+offset_top = 319.0
+offset_right = 199.0
+offset_bottom = 439.0
+
+[node name="Button2" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 372.0
+offset_top = 165.0
+offset_right = 492.0
+offset_bottom = 285.0
+
+[node name="Button3" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 651.0
+offset_top = 305.0
+offset_right = 771.0
+offset_bottom = 425.0
+
+[node name="Button4" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 939.0
+offset_top = 165.0
+offset_right = 1059.0
+offset_bottom = 285.0
+
+[node name="lvl1_completed" type="ColorRect" parent="."]
+offset_left = 79.0
+offset_top = 319.0
+offset_right = 199.0
+offset_bottom = 439.0
+color = Color(0, 1, 0, 1)
+
+[node name="lvl2_completed" type="ColorRect" parent="."]
+offset_left = 372.0
+offset_top = 165.0
+offset_right = 492.0
+offset_bottom = 285.0
+color = Color(0, 1, 0, 1)
+
+[node name="lvl3_completed" type="ColorRect" parent="."]
+offset_left = 651.0
+offset_top = 305.0
+offset_right = 771.0
+offset_bottom = 425.0
+color = Color(0.015686275, 1, 0.17254902, 1)
+
+[node name="lvl4_completed" type="ColorRect" parent="."]
+offset_left = 939.0
+offset_top = 165.0
+offset_right = 1059.0
+offset_bottom = 285.0
+color = Color(0, 1, 0, 1)
+
+[node name="lvl1_locked" type="ColorRect" parent="."]
+offset_left = 79.0
+offset_top = 319.0
+offset_right = 199.0
+offset_bottom = 439.0
+color = Color(0.9796029, 0, 0.14570123, 1)
+
+[node name="lvl2_locked" type="ColorRect" parent="."]
+offset_left = 372.0
+offset_top = 165.0
+offset_right = 492.0
+offset_bottom = 285.0
+color = Color(0.93333334, 0, 0.23137255, 1)
+
+[node name="lvl3_locked" type="ColorRect" parent="."]
+offset_left = 651.0
+offset_top = 305.0
+offset_right = 771.0
+offset_bottom = 425.0
+color = Color(1, 0.09019608, 0, 1)
+
+[node name="lvl4_locked" type="ColorRect" parent="."]
+offset_left = 939.0
+offset_top = 165.0
+offset_right = 1059.0
+offset_bottom = 285.0
+color = Color(1, 0.07058824, 0, 1)
+
+[node name="lock1" type="Sprite2D" parent="."]
+position = Vector2(432.00003, 225.00002)
+scale = Vector2(0.53444445, 0.53388864)
+texture = ExtResource("2_mflmt")
+
+[node name="lock2" type="Sprite2D" parent="."]
+position = Vector2(711, 365)
+scale = Vector2(0.53444445, 0.53388864)
+texture = ExtResource("2_mflmt")
+
+[node name="lock3" type="Sprite2D" parent="."]
+position = Vector2(999, 225.00003)
+scale = Vector2(0.53444445, 0.53388864)
+texture = ExtResource("2_mflmt")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
